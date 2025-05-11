@@ -1,7 +1,9 @@
 <p align="center">
   <img src="logo.png" alt="PAPTOS Logo" width="200"/>
 </p>
+<p align="center">
 https://unaveragetech.github.io/Paptos_client/
+</p>
 
 <h1 align="center">PAPTOS Client v1.0</h1>
 <p align="center"><em>Precision in Every Packet</em></p>
