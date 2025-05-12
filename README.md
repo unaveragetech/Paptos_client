@@ -35,5 +35,12 @@ A minimal, green-on-black matrix for those who move in silence.
 - 👁️‍🗨️ Perfect for stealthy stash raiding and off-meta PvP  
 
 ---
+gallery 
+---
+---
+<p align="center">
+  <img src="logo.png" alt="PAPTOS Logo" width="200"/>
+</p>
+---
 
 > “Find the base. Drop the crystals. Leave no trace.”
