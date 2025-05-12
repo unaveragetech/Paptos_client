@@ -39,7 +39,7 @@ gallery
 ---
 ---
 <p align="center">
-  <img src="logo.png" alt="PAPTOS Logo" width="200"/>
+  <img src="img_8426.jpeg" alt="click gui" width="200"/>
 </p>
 ---
 
