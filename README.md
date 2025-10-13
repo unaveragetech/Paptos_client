@@ -10,10 +10,10 @@ https://unaveragetech.github.io/Paptos_client/
 
 ---
 
-**Version:** Minecraft 1.21.4  
+**Version:** Minecraft 1.21 
 **Mode:** Base Hunting | Crystal PvP
 
-Step into the shadows with **PAPTOS**, a next-gen combat and exploration utility forged for elite Crystal PvP players and base hunters. Designed with a sci-fi terminal aesthetic and hyper-focused modular structure, PAPTOS strips away the clutter and arms you with only what matters most in the fight for supremacy.
+Step into the shadows with **PAPTOS**, a next-gen combat and exploration utility forged for elite Crystal PvP players and base hunters. Designed with a Rasta aesthetic and hyper-focused modular structure, PAPTOS strips away the clutter and arms you with only what matters most in the fight for supremacy, + lots of Qol
 
 ### 🔍 Core Modules
 
