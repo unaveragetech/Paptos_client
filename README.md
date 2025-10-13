@@ -1,7 +1,4 @@
-**Designing HTML content for user**
 
-The user wanted HTML, so I need to make sure the formatting fits their request. I’m planning to use HTML with some stylistic touches like CSS, maybe animations or gradients to make it pop. I'll include icons and cards, perhaps even some glassmorphism for a modern feel. Although formatting rules generally suggest bold labels and code blocks for text, here, it’s all about delivering a clean HTML structure. I'll stick to HTML and CSS with those elements, avoiding unnecessary components. Let's get this done!
-```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -531,5 +528,4 @@ The user wanted HTML, so I need to make sure the formatting fits their request. 
     </footer>
   </main>
 </body>
-</html>
-```
+
